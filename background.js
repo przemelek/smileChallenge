@@ -51,7 +51,7 @@ chrome.extension.onRequest.addListener(
         accepted--;
         if (accepted==0) {
           clearInterval(interval);
-          delete interval;
+          interval = undefined;
           load();
         }
         
